@@ -109,8 +109,15 @@ systemctl enable NetworkManager
 # DWM from GitHub
 sudo -u ${USERNAME} bash <<USEREOF
 cd /home/${USERNAME}
-git clone https://github.com/${GITHUB_USER}/dwm.git
-cd dwm && make && sudo make clean install
+https://github.com/mel0nze/DWM-Netix.git dwm
+cd dwm && make && sudo make clean install && cd
+
+git clone https://github.com/mel0nze/st.git st
+cd st && make && sudo make clean install && cd ..
+
+git clone https://github.com/mel0nze/dmenu.git dmenu
+cd dmenu && make && sudo make clean install && cd ..
+
 echo "exec dwm" > /home/${USERNAME}/.xinitrc
 USEREOF
 
