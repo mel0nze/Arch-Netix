@@ -45,8 +45,8 @@ done
 TIMEZONE="Europe/Bucharest"
 LOCALE="en_US.UTF-8"
 
-PKGS="xorg xorg-xinit libx11 libxft libxinerama feh \
-      firefox htop pipewire pipewire-pulse ttf-hack \
+PKGS="xorg xorg-xinit xrandr libx11 libxft libxinerama feh \
+      firefox flameshot htop pipewire pipewire-pulse ttf-hack \
       ttf-jetbrains-mono noto-fonts-emoji"
 # ────────────────────────────────────────
 
