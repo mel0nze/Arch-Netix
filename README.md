@@ -1,0 +1,1 @@
+This is my own archinstall script. I build this so i can set up a developer enviroment FAST. Its using my ST config at "https://github.com/mel0nze/St-Netix" DMENU "https://github.com/mel0nze/Dmenu-Netix" and DWM "https://github.com/mel0nze/DWM-Netix".
