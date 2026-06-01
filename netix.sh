@@ -127,3 +127,6 @@ echo ""
 echo "══════════════════════════════════"
 echo "  Done. Remove ISO and reboot."
 echo "══════════════════════════════════"
+echo ""
+read -n1 -rp "  Press any key to reboot..." </dev/tty
+reboot
