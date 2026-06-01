@@ -109,7 +109,7 @@ systemctl enable NetworkManager
 # DWM from GitHub
 sudo -u ${USERNAME} bash <<USEREOF
 cd /home/${USERNAME}
-https://github.com/mel0nze/DWM-Netix.git dwm
+git clone https://github.com/mel0nze/DWM-Netix.git dwm
 cd dwm && make && sudo make clean install && cd
 
 git clone https://github.com/mel0nze/st.git st
