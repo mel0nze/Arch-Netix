@@ -21,23 +21,23 @@ mapfile -t DISKS < <(lsblk -d -n -o NAME | grep -v loop)
 select PICK in "${DISKS[@]}"; do
   [[ -n "$PICK" ]] && DISK="/dev/$PICK" && break
   echo "Invalid choice, try again."
-done
+done </dev/tty
 
 echo ""
 echo "  Installing to: $DISK"
 echo "  ALL DATA ON $DISK WILL BE DESTROYED."
 echo ""
-read -rp "  Type YES to confirm: " CONFIRM
+read -rp "  Type YES to confirm: " CONFIRM </dev/tty
 [[ "$CONFIRM" != "YES" ]] && echo "Aborted." && exit 1
 
 # ── USER SETUP ──────────────────────────
 echo ""
-read -rp "  Hostname: " HOSTNAME
-read -rp "  Username: " USERNAME
+read -rp "  Hostname: " HOSTNAME </dev/tty
+read -rp "  Username: " USERNAME </dev/tty
 
 while true; do
-  read -rsp "  Password: " PASSWORD; echo ""
-  read -rsp "  Confirm password: " PASSWORD2; echo ""
+  read -rsp "  Password: " PASSWORD </dev/tty; echo ""
+  read -rsp "  Confirm password: " PASSWORD2 </dev/tty; echo ""
   [[ "$PASSWORD" == "$PASSWORD2" ]] && break
   echo "  Passwords don't match, try again."
 done
