@@ -112,10 +112,10 @@ cd /home/${USERNAME}
 git clone https://github.com/mel0nze/DWM-Netix.git dwm
 cd dwm && make && sudo make clean install && cd
 
-git clone https://github.com/mel0nze/st.git st
+git clone https://github.com/mel0nze/St-Netix.git st
 cd st && make && sudo make clean install && cd ..
 
-git clone https://github.com/mel0nze/dmenu.git dmenu
+git clone https://github.com/mel0nze/Dmenu-Netix.git dmenu
 cd dmenu && make && sudo make clean install && cd ..
 
 echo "exec dwm" > /home/${USERNAME}/.xinitrc
